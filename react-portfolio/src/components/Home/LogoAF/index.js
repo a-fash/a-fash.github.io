@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
+//import gsap from 'gsap'
 import LogoAF from '../../../assets/images/logo_af.png'
 import './index.scss'
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin'
@@ -9,6 +9,7 @@ const Logo = () => {
     const outlineLogoRef = useRef()
     const solidLogoRef = useRef()
   
+    /*
     useEffect(() => {
       gsap.registerPlugin(DrawSVGPlugin)
   
@@ -42,7 +43,8 @@ const Logo = () => {
         }
       )
     }, [])
-  
+    */  
+
     return (
       <div className="logo-container" ref={bgRef}>
         <img
@@ -51,7 +53,8 @@ const Logo = () => {
           src={LogoAF}
           alt="JavaScript,  Developer"
         />
-  
+  	
+	/*
         <svg
           width="8.16667in"
           height="5.55556in"
@@ -129,6 +132,7 @@ const Logo = () => {
             />
           </g>
         </svg>
+	*/
       </div>
     )
   }
