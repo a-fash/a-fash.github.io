@@ -24,7 +24,7 @@ const Contact = () => {
           .then(
             () => {
               alert('Message successfully sent!')
-              window.location.reload(false)
+              //window.location.reload(false)
             },
             () => {
               alert('Failed to send the message, please try again')
