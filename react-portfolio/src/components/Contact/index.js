@@ -44,7 +44,7 @@ const Contact = () => {
                     />
                 </h1>
                 <p>
-                    Filler
+                    Send me an email if you'd like!
                 </p>
                 <div className="contact-form">
                     <form ref={form} onSubmit={sendEmail}>
