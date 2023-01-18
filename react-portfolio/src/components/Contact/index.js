@@ -20,7 +20,7 @@ const Contact = () => {
         e.preventDefault()
     
         emailjs
-          .sendForm('service_8lxe3jz', 'template_suv4xx6', form.current, '3rIl9zdCNceYlSECt')
+          .sendForm('service_gbentf6', 'template_suv4xx6', form.current, '3rIl9zdCNceYlSECt')
           .then(
             () => {
               alert('Message successfully sent!')
