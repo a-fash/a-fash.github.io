@@ -73,7 +73,7 @@ const Contact = () => {
                 <br />
                 Piscataway NJ,
                 <br />
-                <span>andrewfash@rutgers.edu</span>
+                <span>andrew.fash@rutgers.edu</span>
             </div>
             <div className="map-wrap">
                 <MapContainer center={[40.5470, -74.4658]} zoom={13}>
