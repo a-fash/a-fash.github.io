@@ -42,6 +42,8 @@ const Home = () => {
                 strArray={firstNameArray}
                 idx={18}
                 />
+                <br /> 
+                <span>&nbsp; &nbsp;</span>
                 <img
                 class='F'
                 src={LogoF}
@@ -50,7 +52,7 @@ const Home = () => {
                 <AnimatedLetters
                 letterClass={letterClass}
                 strArray={lastNameArray}
-                idx={23}
+                idx={18}
                 />
                 <br />
                 <AnimatedLetters
