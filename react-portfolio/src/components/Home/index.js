@@ -52,13 +52,13 @@ const Home = () => {
                 <AnimatedLetters
                 letterClass={letterClass}
                 strArray={lastNameArray}
-                idx={18}
+                idx={25}
                 />
                 <br />
                 <AnimatedLetters
                 letterClass={letterClass}
                 strArray={jobArray}
-                idx={26}
+                idx={30}
                 />
                 </h1>
                 <h2> Fronted Developer / JavaScript Expert / Youtuber</h2>

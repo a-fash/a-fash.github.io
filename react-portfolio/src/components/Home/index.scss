@@ -89,4 +89,10 @@
             color: #333;
         }
     }
+
+    .text-animate-hover {
+        &:hover {
+            color: #fff;
+        }
+    }
 }
