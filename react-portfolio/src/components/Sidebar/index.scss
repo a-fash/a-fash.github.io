@@ -1,3 +1,5 @@
+$logoColor: #C0B9DD;
+
 .nav-bar {
     background: #181818;
     width: 60px;
@@ -6,6 +8,7 @@
     top: 0;
     z-index: 3;
     min-height: 500px;
+    bottom: sticky;
 
     .logo {
         display: block;
@@ -16,12 +19,6 @@
             margin: 8px auto;
             width: 40px;
             height: auto;
-
-            /*
-            &.subl-logo {
-                width: 50px;
-            }
-            */
         }
     }
 
@@ -48,7 +45,7 @@
             }
 
             &:hover{
-                color: #ffd700;
+                color:  $logoColor;
 
                 svg {
                     opacity: 0;
@@ -93,7 +90,7 @@
 
         a.active {
             svg {
-                color:#ffd700;
+                color: $logoColor;
             }
         }
     }
@@ -116,7 +113,7 @@
                 line-height: 16px;
 
                 &:hover svg {
-                    color: #ffd700;
+                    color:  $logoColor;
                 }
             }
         }

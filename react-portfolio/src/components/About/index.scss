@@ -1,12 +1,13 @@
 .stage-cube-cont {
-    width: 50%;
-    height: 100%;
-    top: 0;
-    padding-top: 18%;
-    margin-left: 0;
     position: absolute;
-    right: 0;
-    overflow: hidden;
+    width: fit-content;
+    height: fit-content;
+    top: 150px;
+    left: 750px;
+    //padding-top: 18%;
+    //margin-left: 0;
+    //right: 0;
+    //overflow: hidden;
 }
 
 .cubespinner {
