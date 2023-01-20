@@ -1,5 +1,5 @@
 $tagColor: #C0B9DD;
-$headingColor: #11B5E4;
+$headingColor: #78C3FB;
 $hoverColor: #C0B9DD;
 $paragraphColor: #fff;
 
@@ -63,6 +63,7 @@ $paragraphColor: #fff;
 .about-page,
 .contact-page {
     .text-zone {
+	min-width: fit-content;
         padding-left: 6%;
         padding-top: 6%;
         padding-right: 5%;
