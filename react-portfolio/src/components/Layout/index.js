@@ -12,7 +12,9 @@ import './index.scss';
             <br />
             <span className="top-tags">&lt;body&gt;</span>
             </span>
-            <Outlet />
+	    <div className='meat'>
+               <Outlet />
+            </div>
             <span className="tags bottom-tags">
             &lt;/body&gt;
             <br />
