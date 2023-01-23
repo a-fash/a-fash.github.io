@@ -8,7 +8,7 @@ import emailjs from '@emailjs/browser'
 const Contact = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate')
-    const form = useRef()
+    const form = useRef();
 
     useEffect(() => {
         setTimeout(() => {
@@ -17,32 +17,36 @@ const Contact = () => {
       }, [])
 
     const sendEmail = (e) => {
-        e.preventDefault()
+        e.preventDefault();
     
         emailjs
           .sendForm('service_gbentf6', 'template_suv4xx6', form.current, '3rIl9zdCNceYlSECt')
           .then(
-            () => {
+            (result) => {
               alert('Message successfully sent!')
               //window.location.reload(false)
             },
-            () => {
+            (error) => {
               alert('Failed to send the message, please try again')
             }
-          )
-    }
+          );
+    };
 
     return (
      <>
         <div className="container contact-page">
             <div className="text-zone">
                 <h1>
-                    <AnimatedLetters
-                        letterClass={letterClass}
-                        strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', ' ', 'm' , 'e']}
-                        idx={11}
-                    />
+                    <div id='Contact me'>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>   
+                        <AnimatedLetters
+                            letterClass={letterClass}
+                            strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', ' ', 'm' , 'e']}
+                            idx={11}
+                        />
+                    </div>
                 </h1>
+                <br/>
                 <p>
                     Send me an email if you'd like!
                 </p>
@@ -62,20 +66,22 @@ const Contact = () => {
                                 <textarea name="message" placeholder="Message" required />
                             </li>
                             <li>
-                                <input type="submit" className="flat-button" value="SEND" />
+                                <input type="submit" className="flat-button" value={"SEND"}/>
                             </li>
                         </ul>
                     </form>
                 </div>
             </div>
+            {/*
             <div className="info-map">
                 Andrew Fash,
                 <br />
                 Piscataway NJ,
                 <br />
-                <span>andrew.fash@rutgers.edu</span>
+                <span>andrewfash@rutgers.edu</span>
             </div>
-            <div className="map-wrap">
+            */}
+            <div className="map-wrap" >
                 <MapContainer center={[40.5470, -74.4658]} zoom={13}>
                 <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                 <Marker position={[40.5470, -74.4658]} />

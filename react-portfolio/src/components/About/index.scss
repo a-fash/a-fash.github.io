@@ -1,13 +1,7 @@
 .stage-cube-cont {
-    position: absolute;
-    width: fit-content;
-    height: fit-content;
-    top: 150px;
-    left: 750px;
-    //padding-top: 18%;
-    //margin-left: 0;
-    //right: 0;
-    //overflow: hidden;
+    background-color: aqua;
+    flex-grow: 1;
+    padding-left: 25%;
 }
 
 .cubespinner {
@@ -17,7 +11,6 @@
     animation-duration: 12s;
     transform-style: preserve-3d;
     transform-origin: 100px 100px 0;
-    margin-left: calc(50% - 100px);
 
     div {
         position: absolute;
@@ -30,7 +23,6 @@
         justify-content: center;
         align-items: center;
         box-shadow: 0 0 20px 0px lightyellow;
-
     }
 
     .face1 {
@@ -54,6 +46,7 @@
 }
 
 @keyframes spincube {
+
     from,
     to {
         transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
@@ -74,3 +67,14 @@
         transform: rotateX(90deg);
     }
 }
+
+
+@media  screen and (orientation: landscape) {
+
+    .stage-cube-cont {
+        padding: 0%;
+        padding-top: 12.5%;
+    }
+}
+
+

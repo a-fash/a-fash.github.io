@@ -19,12 +19,15 @@ const About = () => {
         <>
         <div className="container about-page">
             <div className="text-zone">
-                <h1>
-                    <AnimatedLetters
-                    letterClass={letterClass}
-                    strArray={['A', 'b', 'o', 'u', 't', ' ', ' ', 'm', 'e']}
-                    idx={11}
-                    />
+                <h1>   
+                    <div className='About me'>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <AnimatedLetters
+                        letterClass={letterClass}
+                        strArray={['A', 'b', 'o', 'u', 't', ' ', ' ', 'm', 'e']}
+                        idx={11}
+                        />
+                    </div>
                 </h1>
                 <p>
                     Hey
@@ -33,7 +36,6 @@ const About = () => {
                     to fill
                 </p>
             </div>
-
             <div className='stage-cube-cont'>
                 <div className='cubespinner'>
                     <div className='face1'>
@@ -55,7 +57,6 @@ const About = () => {
                         <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
                     </div>
                 </div>
-
             </div>
         </div>
         <Loader type="line-scale-pulse-out-rapid" style={{transform: 'scale(2)'}} />

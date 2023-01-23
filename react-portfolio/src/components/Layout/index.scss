@@ -1,127 +1,148 @@
 $tagColor: #C0B9DD;
-$headingColor: #11B5E4;
+$headingColor: #78c3fb;
 $hoverColor: #C0B9DD;
 $paragraphColor: #fff;
 
-.page {
+.App {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: absolute;
-    overflow-x: scroll;
+}
+
+.app-container {
+    margin: 0;
+    height: 100%;
+    width: 100%;
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: row;
+}
+
+.sidebar {
+
+    flex: 1;
+    //flex: 1 0 5%;
+    //flex-basis: 5%;
+    //flex-grow: 1;
+}
+
+.page {
+    margin: 0;
+    flex: 20;
+
+    display: flex;
+    flex-flow: column nowrap;
+    overflow-y: scroll;
+    align-items: stretch;
+    //flex: 1 0 100%;
+    //flex-basis: 95%;
+    //flex-grow: 1;
+    //flex-grow: 20;
+    
+    //flex: 40 0 95%;/*IMPORTANT */
+    //justify-content: space-between;
 }
 
 .tags {
+    background-color: greenyellow;
     color: $tagColor;
     opacity: 0.6;
-    position: absolute;
-    bottom: 0;
-    margin-left: 60px;
-    left: 4%;
+    //bottom: 0;
     font-size: 18px;
     font-family: 'La Belle Aurore', cursive;
 }
 
+/*
 .top-tag-html {
-    top: 0;
-    margin-top: 1%;
+    margin-left: 5%;
+    //margin-left: 4%;
+    //padding-top: 1%;
 }
 
 .top-tags {
-    margin-left: 20%;
+    //margin-left: 1%;
 }
+*/
 
 .bottom-tags {
-    top: auto;
-    margin-bottom: 1%;
-    margin-left: 70px;
+    justify-self: flex-end;/*IMPORTANT */
+    //margin-left: 5%;
+    //margin-bottom: 1%;
 }
-  
+ /*
 .bottom-tag-html {
-    margin-left: -20%;
+    //margin-left: -1%;
+}
+*/
+
+.meat {
+    flex: 1;
+    display: flex;
+    align-self: flex-start;/*IMPORTANT */
+    flex-flow: column nowrap;
+    //flex: 2 1 100%;/*IMPORTANT */
 }
 
 .container {
-    width: 100%;
-    will-change: contents;
-    height: 100%;
-    //min-height: 566px;
-    position: absolute;
     opacity: 0;
-    //top: 5%;
-    margin: 0 auto;
+
     z-index: 1;
     transform-style: preserve-3d;
     animation: fadeIn 1s forwards;
     animation-delay: 1s;
 
+    flex-grow: 1; /*IMPORTANT */
+
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
+    align-content: space-around;
 }
 
+.home-page,
 .about-page,
 .contact-page {
     .text-zone {
-        padding-left: 6%;
-        padding-top: 6%;
-        padding-right: 5%;
-        width: 100%;
-        height: 100%;
-        //position: absolute;
-        left: 10%;
-        top: 50%;
-        //transform: translateY(-50%);
-        //width: fit-content;
-        //vertical-align: middle;
-        //display: table-cell;
-        //max-height: 100%;
-        margin-left: 60px;
+        background-color: green;
+        flex-grow: 1;
 
         h1 {
-            font-size: 100px;
-            font-family: 'Coolvetica';
             color: $headingColor;
+            font-size: 53px;
             font-weight: 400;
-            margin-top: 0;
-            position: relative;
-            margin-bottom: 40px;
-            left: 10px;
-	    width: 100%;
+            font-family: 'Coolvetica';
+            margin: 0;
 
             &::before {
-                content: '<h1>';
-                font-family: 'La Belle Aurore';
+                content:'\00a0\00a0\00a0\00a0\00a0<h1>';
                 color: $tagColor;
-                font-size: 18px;
-                position: absolute;
-                margin-top: -10px;
-                left: -10px;
-                opacity: 0.6;
                 line-height: 18px;
+                font-size: 18px;
+                font-family: 'La Belle Aurore';
+                opacity: 0.6;
+                
+                position: absolute;
             }
 
             &::after {
-                content: '<h1/>';
-                font-family: 'La Belle Aurore';
+                content: '\00a0\00a0\00a0\00a0\00a0</h1>';
                 color: $tagColor;
-                font-size: 18px;
                 line-height: 18px;
-                position: absolute;
-                left: -30px;
-                bottom: -20px;
-                margin-left: 20px;
+                font-size: 18px;
+                font-family: 'La Belle Aurore';
                 opacity: 0.6;
+
+                position: absolute;
             }
         }
 
         p {
-            font-style: 13px;
-	    font-size: large;
+            margin-left: 3%;
+
             color: $paragraphColor;
+            font-style: 13px;
+            font-size:large;
             font-family: sans-serif;
             font-weight: 300;
-            min-width: fit-content;
+
             animation: pulse 1s;
 
             &:nth-of-type(1) {
@@ -138,5 +159,18 @@ $paragraphColor: #fff;
         &:hover {
             color: $hoverColor;
         }
+    }
+}
+
+@media  screen and (orientation: landscape) {
+
+    .container {
+        flex-grow: 1;
+        display: inline-flex;
+        flex-direction: row;
+    }
+
+    .meat {
+        flex-grow: 1;
     }
 }
