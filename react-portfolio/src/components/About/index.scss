@@ -1,11 +1,14 @@
 .stage-cube-cont {
-    position: absolute;
+    position: relative;
     width: fit-content;
     height: fit-content;
-    top: 150px;
-    left: 750px;
+    justify-content: center;
+    left: 25%;
+    top: 25%;
+    //top: 150px;
+    //float: right;
     //padding-top: 18%;
-    //margin-left: 0;
+    //margin-left: 25%;
     //right: 0;
     //overflow: hidden;
 }
@@ -17,12 +20,11 @@
     animation-duration: 12s;
     transform-style: preserve-3d;
     transform-origin: 100px 100px 0;
-    margin-left: calc(50% - 100px);
 
     div {
         position: absolute;
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
         border: 1px solid #ccc;
         background: rgba(255, 255, 255, 0.4);
         font-size: 180px;
@@ -30,30 +32,31 @@
         justify-content: center;
         align-items: center;
         box-shadow: 0 0 20px 0px lightyellow;
-
+        //left: auto;
     }
 
     .face1 {
-        transform:  translateZ(100px);
+        transform:  translateZ(150px);
     }
     .face2 {
-        transform:  rotateY(90deg) translateZ(100px);
+        transform:  rotateY(90deg) translateZ(150px);
     }
     .face3 {
-        transform:  rotateY(90deg) rotateX(90deg) translateZ(100px);
+        transform:  rotateY(90deg) rotateX(90deg) translateZ(150px);
     }
     .face4 {
-        transform:  rotateY(180deg) rotateZ(90deg) translateZ(100px);
+        transform:  rotateY(180deg) rotateZ(90deg) translateZ(150px);
     }
     .face5 {
-        transform:  rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+        transform:  rotateY(-90deg) rotateZ(90deg) translateZ(150px);
     }
     .face6 {
-        transform:  rotateX(-90deg) translateZ(100px);
+        transform:  rotateX(-90deg) translateZ(150px);
     }
 }
 
 @keyframes spincube {
+
     from,
     to {
         transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
@@ -72,5 +75,13 @@
     }
     83% {
         transform: rotateX(90deg);
+    }
+}
+
+@media  screen and (orientation: portrait) {
+
+    .stage-cube-cont {
+        justify-content: center;
+        align-content: center;
     }
 }

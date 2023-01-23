@@ -68,13 +68,15 @@ const Contact = () => {
                     </form>
                 </div>
             </div>
+            {/*
             <div className="info-map">
                 Andrew Fash,
                 <br />
                 Piscataway NJ,
                 <br />
-                <span>andrew.fash@rutgers.edu</span>
+                <span>andrewfash@rutgers.edu</span>
             </div>
+            */}
             <div className="map-wrap">
                 <MapContainer center={[40.5470, -74.4658]} zoom={13}>
                 <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />

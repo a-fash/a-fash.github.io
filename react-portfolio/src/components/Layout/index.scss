@@ -1,5 +1,5 @@
 $tagColor: #C0B9DD;
-$headingColor: #78C3FB;
+$headingColor: #78c3fb;
 $hoverColor: #C0B9DD;
 $paragraphColor: #fff;
 
@@ -7,6 +7,7 @@ $paragraphColor: #fff;
     width: 100%;
     height: 100%;
     position: absolute;
+    overflow-y: scroll;
     overflow-x: scroll;
     margin-left: 60px;
     display: flex;
@@ -14,6 +15,8 @@ $paragraphColor: #fff;
 }
 
 .tags {
+    //width: fit-content;
+    //height: fit-content;
     color: $tagColor;
     opacity: 0.6;
     bottom: 0;
@@ -33,7 +36,6 @@ $paragraphColor: #fff;
 .bottom-tags {
     margin-left: 5%;
     margin-bottom: 1%;
-
 }
   
 .bottom-tag-html {
@@ -47,7 +49,7 @@ $paragraphColor: #fff;
 }
 
 .container {
-    width: 100%;
+    width: 90%;
     will-change: contents;
     height: 70%;
     position: absolute;
@@ -58,7 +60,7 @@ $paragraphColor: #fff;
     animation: fadeIn 1s forwards;
     animation-delay: 1s;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
 }
 
 .home-page,
@@ -66,10 +68,10 @@ $paragraphColor: #fff;
 .contact-page {
     .text-zone {
         min-width: 500px;
-        width: 100%;
+        width: fit-content;
         height: 100%;
-        left: 10%;
-        top: 50%;
+        //left: 11%;
+        //top: 50%;
         margin-left: 6%;
 
         h1 {
@@ -81,7 +83,7 @@ $paragraphColor: #fff;
             position: relative;
             margin-bottom: 40px;
             left: 10px;
-	    width: 100%;
+            width: 100%;
 
             &::before {
                 content: '<h1>';
@@ -96,7 +98,7 @@ $paragraphColor: #fff;
             }
 
             &::after {
-                content: '<h1/>';
+                content: '</h1>';
                 font-family: 'La Belle Aurore';
                 color: $tagColor;
                 font-size: 18px;
@@ -112,7 +114,7 @@ $paragraphColor: #fff;
         p {
             margin-left: 3%;
             font-style: 13px;
-	    font-size: large;
+            font-size:large;
             color: $paragraphColor;
             font-family: sans-serif;
             font-weight: 300;
@@ -133,5 +135,22 @@ $paragraphColor: #fff;
         &:hover {
             color: $hoverColor;
         }
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .container {
+        position: absolute;
+        width: 100%;
+        height: fit-content;
+        will-change: contents;
+        //opacity: 0;
+        //margin: 0 auto;
+        z-index: 1;
+        transform-style: preserve-3d;
+        animation: fadeIn 1s forwards;
+        animation-delay: 1s;
+        display: flex;
+        flex-flow: row nowrap;
     }
 }

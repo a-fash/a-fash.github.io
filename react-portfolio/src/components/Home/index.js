@@ -2,16 +2,17 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import LogoA from '../../assets/images/logo_a.png'
 import LogoF from '../../assets/images/logo_f.png'
+import LogoAF from '../../assets/images/logo_af.png'
 import AnimatedLetters from '../AnimatedLetters';
-import Logo from './LogoAF'
 import "./index.scss";
 import Loader from 'react-loaders';
+{/* import Logo from './LogoAF' */}
 
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
     const firstNameArray = [ 'n', 'd', 'r', 'e', 'w']
     const lastNameArray = [ 'a', 's', 'h']
-    const jobArray = ['w', 'e', 'b', ' ', 'd', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r']
+    const jobArray = ['w', 'e', 'b', ' ', 'd', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', ' ', ' ', ' ']
 
     useEffect(() => {
         setTimeout(() => {
@@ -64,7 +65,14 @@ const Home = () => {
                 <h2> Frontend Developer </h2>
                 <Link to="contact" className='flat-button'>CONTACT ME</Link>
             </div> 
-            <Logo />
+            <div className='logo-containter'>
+                <img
+                className="solid-logo"
+                src={LogoAF}
+                alt="JavaScript,  Developer"
+                />
+            </div>
+            {/* <Logo /> */}
         </div>
         <Loader type="line-scale-pulse-out-rapid" style={{transform: 'scale(2)'}} />
         </>

@@ -57,3 +57,138 @@ $buttonColor: #C0B9DD;
 
     }
 }
+
+.logo-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    left: 25%;
+    top: 25%;
+}
+
+.solid-logo {
+    position: relative;
+    top: 5%;
+    
+
+    /*
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    opacity: 0;
+    z-index: 1;
+    */
+}
+
+@media  screen and (orientation: portrait) {
+    .solid-logo {
+        height: 90%;
+        width: 75%;
+    }
+}
+
+/*
+.home-page {
+
+    .text-zone {
+        position: absolute;
+        margin-left: 60px;
+        left: 7%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 80%;
+        max-height: 90%;
+        margin-right: 10%;
+    }
+
+    h1{
+        color: $headingColor;
+        font-size: 53px;
+        margin: 0;
+        font-family: 'Coolvetica';
+        font-weight: 400;
+
+        &::before {
+            content: '<h1>';
+            font-family: 'La Belle Aurore', cursive;
+            color: $tagColor;
+            font-size: 18px;
+            line-height: 18px;
+            position: absolute;
+            margin-top: -10px;
+            left: -10px;
+            opacity: 0.6;
+        }
+
+        &::after {
+            content: '<h1/>';
+            font-family: 'La Belle Aurore', cursive;
+            color: $tagColor;
+            font-size: 18px;
+            line-height: 18px;
+            position: absolute;
+            left: -30px;
+            bottom: -30px;
+            margin-left: 20px;
+            opacity: 0.6;
+        }
+
+        img.A {
+            width: 40px;
+            opacity: 0;
+            height: auto;
+            animation: rotateIn 1s linear both;
+            animation-delay: 1.8s;
+        }
+        img.F {
+            width: 40px;
+            margin-left: 20px;
+            opacity: 0;
+            height: auto;
+            animation: rotateIn 1s linear both;
+            animation-delay: 2.4s;
+        }
+    }
+
+    h2 {
+        color: #8d8d8d;
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 11px;
+        font-family: sans-serif;
+        letter-spacing: 3px;
+        animation: fadeIn 1s 1.8s backwards;
+    }
+
+    .flat-button {
+        color: $buttonColor;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        font-family: sans-serif;
+        text-decoration: none;
+        padding: 10px, 18px;
+        border: 1px solid $buttonColor;
+        margin-top: 25px;
+        float: left;
+        animation: fadeIn 1s 1.8s backwards;
+        white-space: nowrap;
+
+        &:hover {
+            background: #011627;
+            color: #78C3FB;
+        }
+    }
+    
+    .text-animate-hover {
+        &:hover {
+            color: $hoverColor;
+        }
+    }
+}
+*/
